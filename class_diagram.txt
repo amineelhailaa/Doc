@@ -1,0 +1,22 @@
+
+#methods
+In a UML class diagram, an operation (method) goes on the class that is responsible for that behavior.
+Exemple clair
+Méthode : ouvrir()
+Tu poses la question :
+On ouvre quoi ?
+On ouvre la porte → ouvrir() est une méthode de Porte
+On ouvre la session → ouvrir() est une méthode de Session
+On ouvre le fichier → ouvrir() est une méthode de Fichier
+La méthode appartient à ce qui subit l’action.
+
+
+#Pourquoi est-il problématique d'avoir des classes sans méthodes ?
+parce que ca veut dire que cette classe depend sur d'autre classe donc ca c une perte de responsabilite et une classe qui decrit pas le comportement
+
+#Expliquer le principe de responsabilité unique.
+le principe de responsabilite unique ca veut dire que chaque classe doit etre independant
+ des autres classes et avoir une seul responsabilite,
+ ce qui facilite le maintenance et meme l'evolution.
+
+#
