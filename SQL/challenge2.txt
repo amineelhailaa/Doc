@@ -1,0 +1,24 @@
+#A QUOI SERVENT LES FONCTIONS COUNT, SUM ET AVG ?
+
+count sert a calculer le nombre des entrees que la requete donne selon 
+le contraint dans la fonction
+sum sert a calculer la somme d'un colonne selon la requete.
+AVG sert a calculer la moyenne a partir calculer sum et le diviser sur le count .
+
+
+#Peut-on utiliser COUNT(*) et count(colonne) de maniere interchangeable?
+
+count(*) sert a calculer les entrees sans exception , par contre count(column) calculer le nombre des entrees
+ou la valeur des entrees dans la colonne n'est pas null.
+
+#comment max et min peuvent-ils etre utilises sur des dates ou des chaines de caracteres ?
+
+on peut les utilises pour les chaines de caracteres elles calculent le max et le min selon ASCII pour 
+la date elles la calcule  selon l'horlage , on peut aussi les utilises avec des autres fonctions comme length . year hour... peur custimze  selon les besoins.
+
+
+#Challenges Pratiques:
+
+challenge1: ' SELECT COUNT(*) FROM COMMAND '
+challenge2: ' SELECT AVG(prix) FROM COMMAND '
+challenge3: ' SELECT MAX(prix) FROM COMMAND '
