@@ -1,0 +1,31 @@
+#QUESTIONS THEORIQUES :
+1: la classe cest un blueprint et template tandis qu'un objet  cest l'instanciation cree a partir  ce blueprint .
+2: $this sert a referer a l'objet courant .
+3: le constructeur c'est une method magique qui excute lors d'instanciation d'une classe
+
+#CHALLENGES PRATIQUES:
+1: 
+class Voiture {
+	private $marque;
+	private $modele;
+	private $vitesse=0;
+	
+	
+	public function __construct($marque,$modele){
+		$this->marque = $marque;
+		$this->modele = $modele;
+	}
+
+	public function accelerer($vitesse){
+		$this->vitesse += $vitesse;
+	}
+	
+}
+
+------------------------------------------------------
+
+3:
+
+$dacia = new Voiture('Dacia','Logan');
+$dacia->accelerer('100');
+$Audit = new Voiture('Audit','v3');
