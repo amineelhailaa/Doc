@@ -1,0 +1,71 @@
+#QUESTIONS THEORIQUES:
+
+1. l'encapsulation est l'un des principes de programmation orienter objet qui 
+nous permet de controler l'access des donnes d'une classe 
+l'objectif cest de securiser les donnees d'une entite.
+
+
+2. la visibilite public permet d'acceder aux attributs et methodes publiquement , 
+ par contre private permet d'acceder seulement si on est a l'interieur de la classe .
+et protected on peut l'acceder depuis l'interior de la classe mere et les classes enfants qui herite la classe mere aussi .
+
+
+3. les getters sont des methodes qui nous permet d'accedder aux attributs d'une classe selon la visibilite ,
+les setters s'agit des methodes qui permet de modifier les attributs et tout ca 
+sans l'acceder directemenet aux attributs et tout ca pour controler les donnes entrant et empecher d'initiliaser les attributs par des valeurs torts .
+
+c pas necessaire d'en avoir pour chaque attribut notammennt les setters.
+
+
+#CHALLENGE PRATIQUES:
+
+1: 
+class Voiture {
+        public $marque;
+        public $modele;
+        private $vitesse=0;
+
+
+        public function __construct($marque,$modele){
+                $this->marque = $marque;
+                $this->modele = $modele;
+        }
+
+        public function setVitesse(int $vitesse){
+                
+		$vitesse<0 ?: $this->vitesse=$vitesse;
+        }
+	
+	public function getVitesse(){
+	return $this->vitesse;
+	}
+}
+
+
+
+3:
+	class CompteBancaire{
+		private $id;
+		private $owner;
+		private $solde=0;
+		
+
+		public function __construct($id,$owner){
+		$this->id = $id;
+		$this->owner = $owner;
+		}
+
+		public function deposer($montant){
+		if($montant<=0) return;
+		$this->solde= $this->solde + $montant;
+		}
+		
+		public function retirer($montant){
+		if($this->solde<$montant) return;
+		$this->solde = $this->solde - $montant;
+		return $montant;
+		}
+}
+
+
+
