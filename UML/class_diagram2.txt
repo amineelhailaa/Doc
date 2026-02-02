@@ -1,0 +1,18 @@
+#QUESTION THEORIQUES:
+
+1. la difference fondamentale entre la composition et lagregation c que 
+la composition est une relation forte alors que l'agregation est une relation
+de possession faible , par exemple on a terrain est une chambre , sans le terrain on peut pas avoir une chambre ca cest la composition 
+et par exemple une classe est chaque classe contient des etudiants .
+
+
+2. la lecture des multiplicites est simple pour la cote d'une classe on dit 
+combien d'instances de la classe actuelle on peut liee avec un seul instance 
+du autre classe . 
+
+
+3. une classe associative est une classe qui liee deux classes qui ont une relation many to many .
+
+
+
+#CHALLENGES PRATIQUES:
