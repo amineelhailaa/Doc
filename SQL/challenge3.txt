@@ -1,0 +1,33 @@
+#QUESTIONS THEORIQUES
+
+
+1. quelle est la difference entre INNER JOIN et LEFT JOIN ?
+
+inner join retourne les entrees communes entre les deux tableux 
+par contre left join retourne toutes les colonnes du tableau gauche
+et les composer selon ON avec la colonne droite selon les entrees qui matche .
+
+
+2. Dans quel cas utiliser un RIGHT JOIN ?
+
+ on l'utilise RIGHT JOIN qu'on veut assurer que toutes les entrees du 
+tableau droit sont inclus au tableau gauche.
+
+
+3. Peut-on joindre plus de deux tables dans une seule requete?
+	oui on peut le faire . 
+
+
+
+#CHALLENGE PRATIQUES:
+
+challenge1: 
+select client.name , * from command inner join client on command.client_id=client.id ;
+
+challenge2:
+select client.name,command.montant from client left join command on client.id = command.client_id;
+
+challenge3:
+
+select cl.name , product.name , lc.qte  from client cl inner join command c on cl.id=c.client_id 
+join product on prodcut.id= c.product_id  join lignes_commandes lc on c.lc_id=lc.id;
