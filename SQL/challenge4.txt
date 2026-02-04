@@ -1,0 +1,17 @@
+#QUESTIONS THEORIQUES:
+
+
+1. quelle est la difference entre WHERE et having 
+having fonctionne avec les resultats des agregations par exemple groupe by
+par ailleurs where cest une clause qui nous permet de filtrer les donnes simple
+
+2. select from where group by having order by.
+
+
+3. oui on peut l'utiliser dans les deux .
+
+#Challenges Pratiques:
+
+1: select client.name,count(CA) from client join vente v on client.id=v.client_id group by client.id;
+2: select * from produits order by prix desc;
+3: select c.name from client c join commande m on c.id=m.client_id group by c.id having count(m.id)>2;
