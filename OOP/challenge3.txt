@@ -1,0 +1,50 @@
+#questions theoriques 
+
+1: comment fonctionne l'heritage en php ? a quoi sert extends ?
+l'heritage en php cest un principe qui nous permet de centraliser les attributs et methodes  communes entres les classes, et faire les heriter aux classes enfants, et aussi
+lorsque on a une entite qui doit etre un entite mere en premier , on peut la heriter simplement par le mot extends <classname> maintenant on a laccess
+au divers attributs et methods , mais pas totalement ca depends de la visibilite .
+
+
+
+2.. Quelle est la différence entre parent:: et self:: ?
+
+parent se refer au objet quon a instance depuis  la classe mere , mais self se refere a la class actuelle meme .
+
+
+
+3. Quel est l'impact de la visibilité protected dans le contexte de l'héritage ?
+protected nous permet d'utiliser et manupuler les attributs et les methods de la classe quon a heriter sans l'utiliser dehors .
+
+
+
+#challenge pratiques:
+
+class Vehicule{
+protected $marque;
+
+public function __construct($marque){
+$this->marque = $marque;
+}
+protected demarrer(){
+echo "la vehicle demarre";
+}
+}
+
+
+class Voiture extends Vehicule{
+
+private $nbrPorte;
+demarrer(){
+echo " la voiture demarre";
+}
+}
+
+
+class Moto extends Vehicule {
+	public function __construct($marque){
+		parent::__construct($marque);
+		}
+
+}
+
