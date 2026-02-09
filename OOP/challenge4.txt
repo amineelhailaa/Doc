@@ -1,0 +1,72 @@
+#QUESTIONS THEORIQUES
+
+1. labstraction cest une process qui masquer les details dimplemntation tout en ne montrant que les donnes essentiels pour les personnes exterieurs .
+et la classe abstraite est concue pour etre une classe de base qui ne peut pas etre utiliser pour cree des objets , 
+
+2. on peut pas instancer une classe abstrait pour la raison quon lobjectif d'une classe abstrait cest une classe de base qui possede les attributes et les methodes communees
+ainsi elle peut avoir une method abstraite sans implementation . 
+
+3. non , parce que chaque classe qui a instancer la classe abstraite , doit implementer la methode abstrait , et une classe enfant peut pas implementer une fonction privee. 
+
+
+#CHALLENGES PRATIQUES.
+
+
+1. 
+
+abstract class Animal {
+
+protected $name;
+protected $type;
+public function __construct($name,$type){
+$this->name = $name;
+$This->type = $type;
+}
+abstract public function crier();
+
+}
+
+
+
+class Chien extends Animal{
+
+public function crier(){
+return "wooo";
+}
+}
+
+
+
+
+
+
+
+
+3.
+
+abstract class Employee {
+protected $name;
+public function __construct($name){
+$this->name = $name;
+}
+
+abstract public function calculerSalaire();
+}
+
+
+class EmployeFix extends Employee {
+
+public function caluclerSalaire(){
+return $this->days * 150 ;
+}
+
+}
+
+
+class EmployeeCommission extends Employee{
+
+public function calculerSalaire(){
+return $this->sells * 0.1;
+}
+
+}
