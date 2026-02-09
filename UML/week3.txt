@@ -1,0 +1,23 @@
+#QUESTIONS THEORIQUES:
+
+1.Expliquez la relation "est un" (is-a) dans le contexte de la généralisation.
+
+la relation is-a sert a l'heritage , cest une relation qui exprime que cette classe est une autre classe cad que l'autre classe herit toutes les proprietes dela classe actuelle ca c is a 
+
+
+2. Pourquoi est-il crucial de maintenir la cohérence entre le diagramme de
+classes et l'implémentation ?
+
+parce que la conception a pour l'objective de la suivie lors la production , si on a pas maintenir la coherence entre les deux , c pas la peine de cree un diagramme de classe , 
+lorsque un collaborateur commence la production il va lire le diagram pour avoir une idee sur les flux et la conception ,
+ le fait de ne  pas trouver que le code a adopter la conception , ca rends la collaboration difficile . 
+
+
+3. un acteur principale cest un acteur qui agir avec notre systeme et faire des cas d'utilisation , une acteur secondaire est un acteur que le system utilise pour arranger les cas d'utilisation . 
+
+
+
+
+#CHALLENGES PRATIQUES:
+
+ 
