@@ -1,0 +1,34 @@
+#QUESTIONS THEORIQUES:
+1. on utilise une sous requete quand on veut des requeets plus complexes , ou aussi si on est besoin des informations par ex la moyenne ,
+on utilise les jointures pour combine les tableaux , on peut utiliser aussi les sous requetes mais les jointures sont tres efficace que les sous requeetes . 
+
+SELECT name
+FROM customers
+WHERE customer_id IN (SELECT customer_id FROM orders WHERE total_amount > 200);
+
+
+
+2. a quoi sert la clause case when then ?
+la clause case when thenn c comme switch , elle verifier les entrees selectionnes sils sont compatible avec les condtions . 
+
+
+3. correlation subqueries i guess : sont des sous requetes qui nous nous permet de faire une requete selon la sous requete comme quoi condtion par exemple .
+
+
+#Jour 12 : SQL - Sous-requêtes &
+
+select * from produits case when prix > 50 then 'bon marche' when prix > 50 and prix < 200 then 'moyen de gamme' when prix > 200 then 'haut de gamme'  end;
+
+
+
+
+select * from clients where id = ( select client_id from commands where prix = ( select max(prix) from commandes ) );
+
+
+
+select * from clients 
+
+
+
+
+
