@@ -24,11 +24,10 @@ select * from produits case when prix > 50 then 'bon marche' when prix > 50 and 
 
 select * from clients where id = ( select client_id from commands where prix = ( select max(prix) from commandes ) );
 
+select avg(montant) from command
+select  client_id from command where sum(montant) > 1000 
 
+select client_id,(select avg(montant) from command where client_id=client_id) from command where sum(montant)>100 
 
-select * from clients 
-
-
-
-
-
+select * from client where id = ( select client_id from commands where sum(montant) =
+select * , ( select avg(ca) from command where client_id= c.id) from client c where id = ( select sum(ca) from command where client_id=c.id) 

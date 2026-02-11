@@ -1,0 +1,24 @@
+
+
+
+#questions theoriques:
+
+1 , alors je vais trier decroisssant la colonne de chiffre d'affaire puis je vais prendre avec LIMIT les 5 premiers.
+2 , je vais l'identifier avec left join avec le tableau du commande , et la condtion du null . 
+3 , alors pour avoir les commandes de chaque client , on va les grouper avec group by , apres on va calculer la moyenne avec AVG . 
+
+# challenges pratiques:
+
+1.
+select ville, sum(cm.chiffre_affaire) as CA from client cl join command cm on cl.id = cm.client_id group by cl.ville order by CA desc limit 3;
+
+2.
+select * from product p left join command c on p.id = c.product_id where c.id is null; 
+
+3.
+select c.nom,count(m.id) as total_command,
+coun(v.id) as total_vente
+join command m on c.id=m.client_id
+left join vente v on c.id=v.client_id
+group by c.id having total_command > 1;
+
